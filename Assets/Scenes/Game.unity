@@ -143,14 +143,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ecdfc01336143433694e09856c989834, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  World: {fileID: 0}
-  Density: 1
+  World: {fileID: 100000, guid: 6bf593db1df20488d8c6928445b82193, type: 2}
+  DensityRadius: 6
+  Count: 10
   WorldSize:
     serializedVersion: 2
-    x: -1000
-    y: -1000
-    width: 1000
-    height: 1000
+    x: -100
+    y: -100
+    width: 200
+    height: 200
+  WorldsList: []
 --- !u!4 &224285683
 Transform:
   m_ObjectHideFlags: 0
@@ -259,7 +261,7 @@ GameObject:
   - 58: {fileID: 1183734222}
   - 114: {fileID: 1183734223}
   m_Layer: 0
-  m_Name: HomeWolrdMockup
+  m_Name: HomeWolrd
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

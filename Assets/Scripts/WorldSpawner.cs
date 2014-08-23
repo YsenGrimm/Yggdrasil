@@ -9,7 +9,9 @@ public class WorldSpawner : MonoBehaviour {
 	public int Count = 10;
 	public Rect WorldSize = new Rect(-100, -100, 200, 200);
 
-	List<GameObject> worldList = new List<GameObject>();
+	public List<GameObject> WorldsList = new List<GameObject>();
+
+	//List<GameObject> worldList = new List<GameObject>();
 
 	// Use this for initialization
 	void Start () {
@@ -20,6 +22,11 @@ public class WorldSpawner : MonoBehaviour {
 
 			GameObject instWorld = GameObject.Instantiate(World) as GameObject;
 			instWorld.transform.position = new Vector3(randX, randY, 0);
+			instWorld.GetComponent<OtherWorldController>().KnowledgeRange = new Vector2(-10, 10);
+			instWorld.GetComponent<OtherWorldController>().TechnologieRange = new Vector2(-10, 10);
+			instWorld.GetComponent<OtherWorldController>().SpiritRange = new Vector2(-10, 10);
+
+			WorldsList.Add(instWorld);
 
 			// TODO: if space gets to messy, check here
 			/*
