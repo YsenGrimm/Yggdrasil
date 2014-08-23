@@ -22,9 +22,9 @@ public class WorldSpawner : MonoBehaviour {
 
 			GameObject instWorld = GameObject.Instantiate(World) as GameObject;
 			instWorld.transform.position = new Vector3(randX, randY, 0);
-			instWorld.GetComponent<OtherWorldController>().KnowledgeRange = new Vector2(-10, 10);
-			instWorld.GetComponent<OtherWorldController>().TechnologieRange = new Vector2(-10, 10);
-			instWorld.GetComponent<OtherWorldController>().SpiritRange = new Vector2(-10, 10);
+			instWorld.GetComponent<OtherWorldController>().KnowledgeRange = new Vector2(-5, 10);
+			instWorld.GetComponent<OtherWorldController>().TechnologieRange = new Vector2(-5, 10);
+			instWorld.GetComponent<OtherWorldController>().SpiritRange = new Vector2(-5, 10);
 
 			WorldsList.Add(instWorld);
 

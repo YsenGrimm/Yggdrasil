@@ -104,6 +104,7 @@ MonoBehaviour:
   MoveSpeed: .180000007
   xOffest: 100
   yOffset: 100
+  MovementActive: 0
 --- !u!4 &202199019
 Transform:
   m_ObjectHideFlags: 0
@@ -323,3 +324,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 87376db7dbfb84b8a91eb69f30c0c019, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Knowledge: 100
+  Spirit: 100
+  Technologie: 100
+  KnowledgeLevel: 1
+  SpiritLever: 1
+  TechnologieLevel: 1
+  YggdrasilGroth: 0
+  ViewWorldsRadius: 15
+  UpdateTimer: 15

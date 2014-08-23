@@ -7,6 +7,8 @@ public class MouseListener : MonoBehaviour {
 	public float xOffest = 50;
 	public float yOffset = 50;
 
+	public bool MovementActive = true;
+
 	Rect MouseDeadZone;
 	int width = Screen.width;
 	int height = Screen.height;
@@ -20,16 +22,18 @@ public class MouseListener : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		mousePosition = Input.mousePosition;
-		Vector3 cameraPosition = Camera.main.transform.position;
-		if (mousePosition.x > (MouseDeadZone.x + MouseDeadZone.width)) {
-			Camera.main.transform.position = new Vector3(cameraPosition.x + MoveSpeed, cameraPosition.y, cameraPosition.z);
-		} else if (mousePosition.x < MouseDeadZone.x) {
-			Camera.main.transform.position = new Vector3(cameraPosition.x - MoveSpeed, cameraPosition.y, cameraPosition.z);
-		} else if (mousePosition.y < MouseDeadZone.y) {
-			Camera.main.transform.position = new Vector3(cameraPosition.x, cameraPosition.y - MoveSpeed, cameraPosition.z);
-		} else if (mousePosition.y > (MouseDeadZone.y + MouseDeadZone.height)){
-			Camera.main.transform.position = new Vector3(cameraPosition.x, cameraPosition.y + MoveSpeed, cameraPosition.z);
+		if (MovementActive) {
+			mousePosition = Input.mousePosition;
+			Vector3 cameraPosition = Camera.main.transform.position;
+			if (mousePosition.x > (MouseDeadZone.x + MouseDeadZone.width)) {
+				Camera.main.transform.position = new Vector3(cameraPosition.x + MoveSpeed, cameraPosition.y, cameraPosition.z);
+			} else if (mousePosition.x < MouseDeadZone.x) {
+				Camera.main.transform.position = new Vector3(cameraPosition.x - MoveSpeed, cameraPosition.y, cameraPosition.z);
+			} else if (mousePosition.y < MouseDeadZone.y) {
+				Camera.main.transform.position = new Vector3(cameraPosition.x, cameraPosition.y - MoveSpeed, cameraPosition.z);
+			} else if (mousePosition.y > (MouseDeadZone.y + MouseDeadZone.height)){
+				Camera.main.transform.position = new Vector3(cameraPosition.x, cameraPosition.y + MoveSpeed, cameraPosition.z);
+			}
 		}
 	}
 }
